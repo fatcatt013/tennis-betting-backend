@@ -62,6 +62,37 @@ app.post('/api/data/matches', (req, res) => {
   });
 });
 
+app.put('/api/data/matches/:id', (req, res) => {
+  const id = req.params.id;
+  fs.readFile(matchesUrl, 'utf8', (err, data) => {
+    if (err) {
+      res.status(500).send('Error reading file');
+      return;
+    }
+
+    let matches;
+    try {
+      matches = JSON.parse(data);
+      if (!Array.isArray(matches)) {
+        matches = [];
+      }
+    } catch (parseErr) {
+      matches = [];
+    }
+
+    matches = matches.filter((match) => match.id !== id);
+    matches.push(req.body);
+
+    fs.writeFile(matchesUrl, JSON.stringify(matches, null, 2), (writeErr) => {
+      if (writeErr) {
+        res.status(500).send('Error writing file');
+        return;
+      }
+      res.send({ matches: matches });
+    });
+  });
+});
+
 app.get('/api/sofascore/search-match', async (req, res) => {
   try {
     const response = await axios.get(

@@ -1,44 +1,36 @@
 [
   {
-    "id": "1720941018504",
+    "id": "1720969722502",
     "playerOne": {
-      "startingOdds": 1.85,
-      "name": "Matej Stolfa"
+      "startingOdds": 1.5,
+      "name": "Carlos Alcaraz"
     },
     "playerTwo": {
-      "startingOdds": 2.1,
-      "name": "Ricardo Torres"
+      "startingOdds": 3.6,
+      "name": "Novak Djokovic"
     },
-    "bets": [],
+    "bets": [
+      {
+        "player": {
+          "startingOdds": 1.5,
+          "name": "Carlos Alcaraz"
+        },
+        "type": "match_win",
+        "amount": 20,
+        "odds": 1.54,
+        "matchId": "1720969722502",
+        "id": "1720987692241",
+        "potentialWin": 30.8
+      }
+    ],
     "currentSet": 1,
     "points": {
       "playerOne": 0,
       "playerTwo": 0
     },
     "finished": false,
-    "totalMoneyInvested": 0,
-    "date": "2024-07-15",
-    "place": "Antwerp, Belgium"
-  },
-  {
-    "id": "1720941348842",
-    "playerOne": {
-      "startingOdds": 4.34,
-      "name": "Ekaterina Makarova"
-    },
-    "playerTwo": {
-      "startingOdds": 1.17,
-      "name": "Katarina Zavatska"
-    },
-    "bets": [],
-    "currentSet": 1,
-    "points": {
-      "playerOne": 0,
-      "playerTwo": 0
-    },
-    "finished": false,
-    "totalMoneyInvested": 0,
-    "date": "2024-07-14",
-    "place": "Budapest, Hungary"
+    "totalMoneyInvested": 20,
+    "date": "",
+    "place": ""
   }
 ]
