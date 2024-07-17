@@ -1,36 +1,27 @@
 [
   {
-    "id": "1720969722502",
+    "id": "1721243345933",
     "playerOne": {
-      "startingOdds": 1.5,
-      "name": "Carlos Alcaraz"
+      "startingOdds": 2,
+      "name": "Diane Parry",
+      "sofascoreId": 247791,
+      "elo": 1715
     },
     "playerTwo": {
-      "startingOdds": 3.6,
-      "name": "Novak Djokovic"
+      "startingOdds": 2,
+      "name": "Jil Teichmann",
+      "sofascoreId": 90814,
+      "elo": 1600
     },
-    "bets": [
-      {
-        "player": {
-          "startingOdds": 1.5,
-          "name": "Carlos Alcaraz"
-        },
-        "type": "match_win",
-        "amount": 20,
-        "odds": 1.54,
-        "matchId": "1720969722502",
-        "id": "1720987692241",
-        "potentialWin": 30.8
-      }
-    ],
+    "bets": [],
     "currentSet": 1,
     "points": {
       "playerOne": 0,
       "playerTwo": 0
     },
     "finished": false,
-    "totalMoneyInvested": 20,
-    "date": "",
-    "place": ""
+    "totalMoneyInvested": 0,
+    "date": "2024-07-18",
+    "place": "Palermo"
   }
 ]
