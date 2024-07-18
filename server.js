@@ -12,7 +12,7 @@ import puppeteer from 'puppeteer';
 const app = express();
 const port = 14123;
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '50mb' }));
 app.use(cors());
 
 app.listen(port, () => {
