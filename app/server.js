@@ -10,7 +10,7 @@ import cheerio from 'cheerio';
 import puppeteer from 'puppeteer';
 
 const app = express();
-const port = 14123;
+const port = 3000;
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(cors());
@@ -150,7 +150,10 @@ app.get('/api/sofascore/search-match', async (req, res) => {
 
 async function fetchPlayerData(playerName) {
   try {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      executablePath: '/usr/bin/chromium-browser',
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
     const page = await browser.newPage();
     const url = `https://www.tennisabstract.com/cgi-bin/wplayer.cgi?p=${playerName}`;
 
